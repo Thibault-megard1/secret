@@ -1,23 +1,16 @@
-# Project Name
+# Mini Arcade - HTML/CSS/JS
 
 ## Description
-Brief description of your project goes here.
+Site web simple avec 3 jeux:
+- Tic Tac Toe contre une IA simple
+- Pendu
+- Pierre-Feuille-Ciseaux
 
 ## Installation
-```bash
-npm install
-```
+Aucune installation necessaire.
 
 ## Usage
-```bash
-npm start
-```
+Ouvrir `index.html` dans un navigateur.
 
-## Contributing
-Contributions are welcome. Please submit a pull request.
-
-## License
+## Licence
 MIT
-
-## Author
-Your Name
