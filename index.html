@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Arcade - 3 Jeux</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="kicker">Mini Arcade</p>
+      <h1>3 jeux simples en HTML, CSS et JS</h1>
+      <p>Joue au Tic Tac Toe contre une IA, au Pendu, et à Pierre-Feuille-Ciseaux.</p>
+    </header>
+
+    <nav class="tabs" aria-label="Jeux">
+      <button class="tab-btn active" data-tab="tic">Tic Tac Toe</button>
+      <button class="tab-btn" data-tab="pendu">Pendu</button>
+      <button class="tab-btn" data-tab="rps">Pierre-Feuille-Ciseaux</button>
+    </nav>
+
+    <section class="tab-panel active" id="tic-panel">
+      <h2>Tic Tac Toe vs IA</h2>
+      <p id="tic-status" class="status">Ton tour (X)</p>
+      <div id="tic-board" class="tic-board" role="grid" aria-label="Plateau Tic Tac Toe"></div>
+      <button id="tic-reset" class="btn">Nouvelle partie</button>
+    </section>
+
+    <section class="tab-panel" id="pendu-panel">
+      <h2>Pendu</h2>
+      <p id="hangman-status" class="status">Trouve le mot !</p>
+      <p id="hangman-word" class="hangman-word">_ _ _ _</p>
+      <p>Lettres utilisées: <span id="hangman-used">Aucune</span></p>
+      <p>Erreurs: <span id="hangman-errors">0</span>/6</p>
+      <div class="hangman-controls">
+        <input id="hangman-input" type="text" maxlength="1" placeholder="Une lettre" aria-label="Entrer une lettre" />
+        <button id="hangman-guess" class="btn">Proposer</button>
+        <button id="hangman-reset" class="btn btn-secondary">Nouveau mot</button>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="rps-panel">
+      <h2>Pierre-Feuille-Ciseaux</h2>
+      <p id="rps-status" class="status">Choisis un coup.</p>
+      <div class="rps-actions">
+        <button class="btn rps-choice" data-choice="pierre">Pierre</button>
+        <button class="btn rps-choice" data-choice="feuille">Feuille</button>
+        <button class="btn rps-choice" data-choice="ciseaux">Ciseaux</button>
+      </div>
+      <p id="rps-result">--</p>
+      <p>Score: Toi <span id="rps-player-score">0</span> - IA <span id="rps-ai-score">0</span></p>
+      <button id="rps-reset" class="btn btn-secondary">Réinitialiser le score</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
